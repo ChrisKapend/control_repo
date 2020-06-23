@@ -4,5 +4,7 @@ node default {
         content => 'this is a readme',
         owner => 'josiane',
     }
-
+}
+node 'localhost.localdomain'{
+    include role::master_server
 }
