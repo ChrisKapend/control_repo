@@ -9,7 +9,13 @@ node default {
         ensure => 'present',
     }
 }
-
+node 'srv01'{
+    include role::master_server
+    file{'/root/README':
+      ensure => file,
+      content => $fqdn,
+    }
+}
 node 'srv02'{
     include role::app_server
 }
