@@ -4,11 +4,15 @@ node default {
         content => 'this is a readme',
         owner => 'josiane',
     }
+    user {'josiane':
+        name => 'josiane',
+        ensure => 'present',
+    }
 }
 
-node '192.168.1.61'{
+node 'srv02'{
     include role::app_server
 }
-node '192.168.1.97'{
+node 'srv03'{
     include role::db_server
 }
