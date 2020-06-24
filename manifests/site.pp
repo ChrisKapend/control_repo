@@ -6,9 +6,9 @@ node default {
     }
 }
 
-node 'srv02'{
+node '192.168.1.61'{
     include role::app_server
 }
-node 'srv03'{
+node '192.168.1.97'{
     include role::db_server
 }
