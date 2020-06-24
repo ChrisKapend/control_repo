@@ -5,6 +5,10 @@ node default {
         owner => 'josiane',
     }
 }
-node 'localhost.localdomain'{
-    include role::master_server
+
+node 'srv02'{
+    include role::app_server
+}
+node 'srv03'{
+    include role::db_server
 }
