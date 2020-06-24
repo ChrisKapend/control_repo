@@ -9,7 +9,7 @@ node default {
         ensure => 'present',
     }
 }
-node 'srv01'{
+node 'srv01.sek.tigerresources.local'{
     include role::master_server
     file{'/root/README':
       ensure => file,
